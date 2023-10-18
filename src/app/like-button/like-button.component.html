@@ -1,0 +1,34 @@
+<style>
+  .LikeButton {
+    width: 13vw;
+    height: 6vh;
+    font-style: oblique;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    background-color:cornflowerblue ;
+    color: white;
+    cursor: pointer;
+  }
+  .ButtonDiv{
+    display: flex;
+    flex-direction: column;
+  }
+  .liked {
+    margin-left: 3%;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: large;
+  }
+</style>
+<div class="ButtonDiv">
+  <button class="LikeButton" (click)="toggleLike()">
+    {{ isLiked ? 'Like' : 'Liked' }}
+  </button>
+  <h4 class="liked">{{ likes }} people liked this post</h4>
+</div>
+
+
+
+<router-outlet></router-outlet>
